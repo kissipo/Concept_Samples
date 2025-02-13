@@ -2,14 +2,22 @@
 
 int main()
 {
-    int i, n, A[100];
-    scanf ("%d", &n);
-    for (i=0; i!=n; i=i+1) { 
-      A[i] = i;
-      i = i + 1;
-    }
+  int b[101], a[101];
+  int i;
 
-    printf("%d\n",n);
+  for (i = 1; i <= 100; i = i + 1)
+  {
+    b[i] = i;
+  }
 
-    return 0;
+  a[0] = 0;
+
+  for (i = 1; i <= 100; i = i + 1)
+  {
+    a[i] = b[i] + a[i - 1];
+  }
+
+  printf("%d\n", a[50] - a[30]);
+
+  return 0;
 }
