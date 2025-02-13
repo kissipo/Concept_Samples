@@ -1,14 +1,12 @@
+//a004: getchar() 函數的使用
+//輸入一個字元，然後輸出該字元及其 ASCII 碼值。
 #include <stdio.h>
+int main() {
+  int c;
 
-int main()
-{
-    int i, j;
-    for (i = 0; i < 5; i = i + 1)
-    {
-        for (j = 0; j > i; j = j + 2)
-        {
-            printf("[%d]", i + j);
-        }
-    }
-    return 0;
+  printf("請輸入一個字元：");
+  c = getchar();
+
+  printf("您輸入的字元是：%c，ASCII 碼值為：%d\n", c, c);
+  return 0;
 }

@@ -1,24 +1,14 @@
+//a002: printf()函式的使用
+//輸出姓名、年齡、身高
 #include <stdio.h>
-int f(int i);
 
-int main()
-{
+int main() {
+  char name[] = "小明";
+  int age = 18;
+  float height = 1.75;
 
-    printf("f(10) = %d\n", f(10));
-    return 0;
-}
+  printf("姓名：%s，年齡：%d 歲，身高：%.2f 公尺\n", 
+                               name, age, height);
 
-int f(int i)
-{
-    if (i > 0)
-    {
-        if (((i / 2) % 2) == 0)
-            return f(i - 2) * i;
-        else
-            return f(i - 2) * (-i);
-    }
-    else
-    {
-        return 1;
-    }
+  return 0;
 }
