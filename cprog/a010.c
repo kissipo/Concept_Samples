@@ -1,17 +1,25 @@
+//a010: 選擇敘述 (Selection Statements)
+//說明 選擇敘述的使用
 #include <stdio.h>
-
-void f(int x, int y)
-{
-    int tem = x;
-    x = y;
-    y = tem;
-}
-
-int main()
-{
-
-    int x = 2, y = 3;
-    f(x, y);
-    printf("%d", (x - y) * (x + y) / 2);
-    return 0;
+int main() {
+    int x = 10;
+    int day = 2;
+    if (x > 0) {
+        printf("x is positive");
+    } else if (x < 0) {
+        printf("x is negative");
+    } else {
+        printf("x is zero");
+    }
+    switch (day) {
+        case 1:
+            printf("Monday");
+            break;
+        case 2:
+            printf("Tuesday");
+            break;
+        default:
+            printf("Invalid day");
+    }      // 遞增敘述
+  return 0;
 }

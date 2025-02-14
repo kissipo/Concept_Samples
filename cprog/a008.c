@@ -1,27 +1,10 @@
+//a008: 表達式敘述 (Expression Statements)
+//說明敘述、賦值敘述、函式呼叫敘述、遞增敘述
 #include <stdio.h>
-
-int main()
-{
-    int Q[200];
-    int i, val = 0;
-    int count = 0;
-    int head = 0, tail = 0;
-    for (i = 1; i <= 30; i = i + 1)
-    {
-        Q[tail] = i;
-        tail = tail + 1;
-    }
-    while (tail > head + 1)
-    {
-        val = Q[head];
-        head = head + 1;
-        count = count + 1;
-        if (count == 3)
-        {
-            count = 0;
-            Q[tail] = val;
-            tail = tail + 1;
-        }
-    }
-    printf("%d", Q[head]);
+int main() {
+    x = 10;         // 賦值敘述
+    y = x + 5;     // 賦值敘述
+    printf("Hello"); // 函式呼叫敘述
+    i++;        // 遞增敘述
+  return 0;
 }

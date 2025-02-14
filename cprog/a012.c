@@ -1,36 +1,12 @@
+//a010: 跳躍敘述 (Jump Statements)
+//說明 跳躍敘述的使用
 #include <stdio.h>
-
-int f(int a[], int n)
-{
-    int index = 0;
-    for (int i = 1; i <= n - 1; i++)
-    {
-        if (a[i] >= a[index])
-        {
-            index = i;
+int main() {
+    for (int i = 0; i < 10; i++) {
+        if (i == 5) {
+            break; // 跳出迴圈
         }
+        printf("%d ", i);
     }
-    return index;
-}
-
-int main()
-{
-    int n;
-
-    printf("請輸入數組: ");
-    scanf("%d", &n);
-
-    int a[n];
-
-    printf("請輸入數組的元素: \n");
-    for (int i = 0; i < n; i++)
-    {
-        scanf("%d", &a[i]);
-    }
-
-    int index = f(a, n);
-
-    printf("最大值的索引是: %d\n", index);
-
-    return 0;
+  return 0;
 }

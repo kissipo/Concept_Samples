@@ -1,25 +1,18 @@
+//a011: 迭代敘述 (Iteration Statements)
+//說明 迭代敘述的使用
 #include <stdio.h>
-
-int main()
-{
-    int k = 4;
-    int m = 1;
-
-    for (int i = 1; i <= 5; i = i + 1)
-    {
-        for (int j = 1; j <= k; j = j + 1)
-        {
-            printf(" ");
-        }
-
-        for (int j = 1; j <= m; j = j + 1)
-        {
-            printf("*");
-        }
-
-        printf("\n");
-        k = k - 1;
-        m = m + 2;
+int main() {
+    int x = 10;
+    for (int i = 0; i < 10; i++) {
+        printf("%d ", i);
     }
-    return 0;
+    while (x > 0) {
+        printf("%d ", x);
+        x--;
+    }
+    do {
+        printf("%d ", x);
+        x--;
+    } while (x > 0);
+  return 0;
 }
