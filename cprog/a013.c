@@ -1,67 +1,18 @@
+//a013: 跳躍敘述 (Jump Statements)
+//說明 跳躍敘述的使用
 #include <stdio.h>
-
-int f1(int a[], int size, int value, int *count)
-{
-    int r_value = -1;
-    int i = 0;
-    *count = 0;
-    while (i < size)
-    {
-        (*count)++;
-        if (a[i] == value)
-        {
-            r_value = i;
-            break;
+int main() {
+    for (int i = 0; i < 10; i++) {
+        if (i == 5) {
+            break; // 跳出迴圈
         }
-        i = i + 1;
+        printf("%d ", i);
     }
-    return r_value;
-}
-
-int f2(int a[], int size, int value, int *count)
-{
-    int r_value = -1;
-    int low = 0, high = size - 1;
-    int mid;
-    *count = 0;
-    while (low <= high)
-    {
-        (*count)++;
-        mid = (low + high) / 2;
-        if (a[mid] == value)
-        {
-            r_value = mid;
-            break;
+    for (int i = 0; i < 10; i++) {
+        if (i % 2 == 0) { // 如果 i 是偶數
+          continue; // 跳過當前迭代
         }
-        else if (a[mid] < value)
-        {
-            low = mid + 1;
-        }
-        else
-        {
-            high = mid - 1;
-        }
+        printf("%d ", i);
     }
-    return r_value;
-}
-
-int main()
-{
-    int a[100];
-    for (int i = 0; i < 100; i++)
-    {
-        a[i] = 3 * i + 1;
-    }
-
-    int value = 100;
-    int size = 100;
-
-    int count_f1 = 0, count_f2 = 0;
-
-    f1(a, size, value, &count_f1);
-    f2(a, size, value, &count_f2);
-    printf("n1 = %d\n", count_f1);
-    printf("n2 = %d\n", count_f2);
-
-    return 0;
+  return 0;
 }
