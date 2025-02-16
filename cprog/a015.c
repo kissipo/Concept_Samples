@@ -1,31 +1,12 @@
+//a015: 變數的宣告
 #include <stdio.h>
 
-int count = 0;
-
-int f(int n)
-{
-    int sum = 0;
-    if (n < 2)
-    {
-        return 0;
-    }
-    for (int i = 1; i <= n; i = i + 1)
-    {
-        sum = sum + i;
-        count++;
-    }
-    sum = sum + f(2 * n / 3);
-    return sum;
+int main() {
+    int age;          // 整數變數 
+    float height;       // 浮點數變數
+    char initial;       // 字元變數
+    double pi = 3.14159; // 雙精度浮點數變數
+    _Bool isAdult = 1;   // 布林變數
+     return 0;
 }
 
-int main()
-{
-    int n;
-
-    scanf("%d", &n);
-    f(n);
-
-    printf("%d\n", count);
-
-    return 0;
-}
