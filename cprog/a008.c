@@ -2,6 +2,7 @@
 //說明敘述、賦值敘述、函式呼叫敘述、遞增敘述
 #include <stdio.h>
 int main() {
+    int x, y, i;
     x = 10;         // 賦值敘述
     y = x + 5;     // 賦值敘述
     printf("Hello"); // 函式呼叫敘述

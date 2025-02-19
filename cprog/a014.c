@@ -1,23 +1,15 @@
+//a014: 序列結構
+//由上而下按照順序執行
 #include <stdio.h>
 
-int main()
-{
-  int b[101], a[101];
-  int i;
+int main() {
+  int x = 10;  // 宣告一個整數變數 x，並賦值為 10
+  int y = 5;   // 宣告一個整數變數 y，並賦值為 5
+  int sum;     // 宣告一個整數變數 sum
 
-  for (i = 1; i <= 100; i = i + 1)
-  {
-    b[i] = i;
-  }
+  sum = x + y; // 將 x 和 y 相加，結果賦值給 sum
 
-  a[0] = 0;
-
-  for (i = 1; i <= 100; i = i + 1)
-  {
-    a[i] = b[i] + a[i - 1];
-  }
-
-  printf("%d\n", a[50] - a[30]);
+  printf("x + y = %d\n", sum); // 輸出 sum 的值
 
   return 0;
 }

@@ -1,4 +1,4 @@
-//A005: putchar()函式的使用
+//a005: putchar()函式的使用
 // putchar()函式將字元輸出到螢幕上，並且不會換行。
 #include <stdio.h>
 int main() {
