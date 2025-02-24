@@ -1,15 +1,17 @@
-//a017: 指標變數
-//指標變數的值、記憶體位址、指向的值
+//a017: 位元運算
+//位元運算子 &、|、^、~、<<、>>
 #include <stdio.h>
 
 int main() {
-  int num = 10;
-  int *ptr = &num;
+    int a = 10; // 二進位：1010
+    int b = 5;  // 二進位：0101
 
-  printf("value of num   : %d\n", num); // 輸出 num 的值
-  printf("address of num : %p\n", &num); // 輸出 num 的記憶體位址
-  printf("value of ptr   : %p\n", ptr); // 輸出 ptr 的值 (num 的記憶體位址)
-  printf("value of addr  : %d\n", *ptr); // 輸出 ptr 指向的記憶體位置中儲存的值
+    printf("a & b = %d\n", a & b);   // 輸出：0
+    printf("a | b = %d\n", a | b);   // 輸出：15
+    printf("a ^ b = %d\n", a ^ b);   // 輸出：15
+    printf("~a = %d\n", ~a);         // 輸出：-11
+    printf("a << 2 = %d\n", a << 2); // 輸出：40
+    printf("a >> 2 = %d\n", a >> 2); // 輸出：2
 
-  return 0;
+    return 0;
 }

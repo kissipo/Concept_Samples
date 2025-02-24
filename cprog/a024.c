@@ -1,4 +1,4 @@
-//a019: 字串變數
+//a024: 字串變數
 //字串的宣告與初始化及運算
 #include <stdio.h>
 #include <string.h>

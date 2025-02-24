@@ -1,6 +1,5 @@
 //a034:計算最大公因數
 #include <stdio.h>
-// 計算最大公因數的函式
 int gcd1(int a, int b) {
     if (b == 0) {
         return a; // 基本情況：餘數為 0，a 即為最大公因數

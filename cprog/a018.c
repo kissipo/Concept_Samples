@@ -1,20 +1,16 @@
-//a018: 結構變數
-//學生資料的結構
-#include <string.h>
-struct Student {
-  int age;
-  char id[10];
-  float score;
-};
-
+//a018: if判斷式
+//判斷數字是正數、負數或零
+#include <stdio.h>
 int main() {
-  struct Student student1;
-  student1.age = 18;
-  student1.score = 90.5;
-  strcpy(student1.id, "1234567890");
+  int num = 10;
 
-  printf("Age: %d\n", student1.age);
-  printf("ID: %s\n", student1.id);
-  printf("Score: %f\n", student1.score);
+  if (num > 0) {
+    printf("num 是正數\n");
+  } else if (num < 0) {
+    printf("num 是負數\n");
+  } else {
+    printf("num 是零\n");
+  }
+
   return 0;
 }
