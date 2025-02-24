@@ -1,41 +1,15 @@
+//a017: 指標變數
+//指標變數的值、記憶體位址、指向的值
 #include <stdio.h>
 
-void main()
-{
-    int count = 10;
-    if (count > 0)
-    {
-        count = 11;
-    }
-    if (count > 10)
-    {
-        count = 12;
-        if (count % 3 == 4)
-        {
-            count = 1;
-        }
-        else
-        {
-            count = 0;
-        }
-    }
-    else if (
-        count > 11)
-    {
-        count = 13;
-    }
-    else
-    {
-        count = 14;
-    }
-    if (count)
-    {
-        count = 15;
-    }
-    else
-    {
-        count = 16;
-    }
+int main() {
+  int num = 10;
+  int *ptr = &num;
 
-    printf("%d\n", count);
+  printf("value of num   : %d\n", num); // 輸出 num 的值
+  printf("address of num : %p\n", &num); // 輸出 num 的記憶體位址
+  printf("value of ptr   : %p\n", ptr); // 輸出 ptr 的值 (num 的記憶體位址)
+  printf("value of addr  : %d\n", *ptr); // 輸出 ptr 指向的記憶體位置中儲存的值
+
+  return 0;
 }

@@ -1,19 +1,13 @@
+//a020: loop迴圈的範例
+// 這是一個印出 1 到 10 的數字的範例
 #include <stdio.h>
 
-int g(int a)
-{
-    if (a > 1)
-    {
-        return g(a - 2) + 3;
-    }
-    return a;
-}
+int main() {
+  // 印出 1 到 10 的數字
+  for (int i = 1; i <= 10; i++) {
+    printf("%d ", i);
+  }
+  printf("\n");
 
-int main()
-{
-    int a;
-    printf("請輸入一個數字: ");
-    scanf("%d", &a);
-    printf("結果是: %d\n", g(a));
-    return 0;
+  return 0;
 }

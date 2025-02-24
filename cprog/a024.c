@@ -1,34 +1,19 @@
+//a019: 字串變數
+//字串的宣告與初始化及運算
 #include <stdio.h>
+#include <string.h>
 
-void foo(int i)
-{
-    if (i <= 5)
-    {
-        printf("foo: %d\n", i);
-    }
-    else
-    {
-        bar(i - 10);
-    }
-}
+int main() {
+  char str1[20] = "Hello"; // 宣告並初始化字串
+  char str2[20];
 
-void bar(int i)
-{
-    if (i <= 10)
-    {
-        printf("bar: %d\n", i);
-    }
-    else
-    {
-        foo(i - 5);
-    }
-}
+  strcpy(str2, str1); // 複製字串
+  strcat(str2, ", world!"); // 連接字串
 
-int main()
-{
-    foo(15106);
-    bar(3091);
-    foo(6693);
+  printf("str1: %s\n", str1);
+  printf("str2: %s\n", str2);
 
-    return 0;
+  printf("str1 的長度: %d\n", strlen(str1));
+
+  return 0;
 }

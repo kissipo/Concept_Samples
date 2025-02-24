@@ -1,35 +1,20 @@
+//a021:多重條件的迴圈
+// 迴圈的條件部分可以包含多個條件，
 #include <stdio.h>
 
-int main()
-{
-    int n;
-
-    printf("請輸入陣列大小: ");
-    scanf("%d", &n);
-
-    int a[n];
-
-    printf("請輸入陣列數值: ");
-    for (int i = 0; i < n; i++)
-    {
-        scanf("%d", &a[i]);
-    }
-
-    int hold;
-
-    for (int i = 0; i < n - 1; i++)
-    {
-        hold = a[i];
-        a[i] = a[i + 1];
-        a[i + 1] = hold;
-    }
-
-    printf("Modified array: ");
-    for (int i = 0; i < n; i++)
-    {
-        printf("%d ", a[i]);
-    }
+int main() {
+    for (int j = 0; j < 10 || j > 15; j++) { // 兩個條件
+        printf("%d ", j);
+        if (j > 20) {
+          break;
+        }
+      }
     printf("\n");
 
-    return 0;
+    // 使用逗號分隔多個表達式
+    for (int i = 1, j = 10; i <= j; i++, j--) {
+        printf("%d %d\n", i, j);
+    }
+
+  return 0;
 }

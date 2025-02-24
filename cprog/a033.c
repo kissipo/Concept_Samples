@@ -1,33 +1,23 @@
+//a033:階乘的範例
 #include <stdio.h>
-
-void F()
-{
-    char t, item[] = {'2', '8', '3', '1', '9'};
-    int a, b, c, count = 5;
-
-    for (a = 0; a < count - 1; a = a + 1)
-    {
-        c = a;
-        t = item[a];
-
-        for (b = a + 1; b < count; b = b + 1)
-        {
-            if (item[b] < t)
-            {
-                c = b;
-                t = item[b];
-            }
-
-            if ((a == 2) && (b == 3))
-            {
-                printf("%c %d\n", t, c);
-            }
-        }
+int factorial1(int n) {
+    if (n == 0) {
+        return 1;
+    } else {
+        return n * factorial1(n - 1);
     }
 }
+int factorial2(int n) {
+    int result = 1;
+    for (int i = 1; i <= n; i++) {
+        result *= i;
+    }
+    return result;
+}
 
-int main()
-{
-    F();
+int main() {
+    int n = 5;
+    printf("%d 的階乘是：%d\n", n, factorial1(n));
+    printf("%d 的階乘是：%d\n", n, factorial2(n));
     return 0;
 }

@@ -1,33 +1,15 @@
+//a017: 指標變數
+//指標變數的值、記憶體位址、指向的值
 #include <stdio.h>
 
-int a(int n, int m)
-{
-    if (n < 10)
-    {
-        if (m < 10)
-        {
-            return n + m;
-        }
-        else
-        {
-            return a(n, m - 2) + m;
-        }
-    }
-    else
-    {
-        return a(n - 1, m) + n;
-    }
-}
+int main() {
+  int num = 10;
+  int *ptr = &num;
 
-int main()
-{
-    int n, m;
+  printf("value of num   : %d\n", num); // 輸出 num 的值
+  printf("address of num : %p\n", &num); // 輸出 num 的記憶體位址
+  printf("value of ptr   : %p\n", ptr); // 輸出 ptr 的值 (num 的記憶體位址)
+  printf("value of addr  : %d\n", *ptr); // 輸出 ptr 指向的記憶體位置中儲存的值
 
-    printf("請輸入 n and m: ");
-    scanf("%d %d", &n, &m);
-
-    int result = a(n, m);
-    printf("回傳值: %d\n", result);
-
-    return 0;
+  return 0;
 }

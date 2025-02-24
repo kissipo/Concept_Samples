@@ -1,25 +1,27 @@
+//a016: 邏輯運算子
+// 邏輯運算子用於組合多個條件，
+// 根據這些條件的結果返回一個布爾值（true 或 false）。
 #include <stdio.h>
-
-struct element
-{
-    char data;
-    int next;
-};
-
-void RemoveNextElement(struct element list[], int current)
-{
-    if (list[current].next != -1)
-        list[current].next = list[list[current].next].next;
-}
-
-int main()
-{
-    struct element list[] = {{'A', 1}, {'B', 2}, {'C', 3}, {'D', 4}, {'E', -1}};
-
-    RemoveNextElement(list, 1); // 刪除 list[1] 的下一個節點 (即 list[2])
-
-    for (int i = 0; i < 5; i++)
-        printf("[%c, %d] ", list[i].data, list[i].next);
-
+int main() {
+    int a = 15;
+    int b = 25;
+    // 邏輯 AND
+    if ((a > 10) && (a < 20)) {
+        printf("a 在 10 到 20 之間\n");
+    } else {
+        printf("a 不在 10 到 20 之間\n");
+    }
+    // 邏輯 OR
+    if ((b < 0) || (b > 20)) {
+        printf("b 小於 0 或大於 20\n");
+    } else {
+        printf("b 不小於 0 且不大於 20\n");
+    }
+    // 邏輯 NOT
+    if (!(a == 0)) {
+        printf("a 不等於 0\n");
+    } else {
+        printf("a 等於 0\n");
+    }
     return 0;
 }

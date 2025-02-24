@@ -1,12 +1,17 @@
-//a015: 變數的宣告
+//a015:  關係運算子
+//關係運算子是用來比較兩個數值的大小，並回傳一個布林值。
 #include <stdio.h>
 
 int main() {
-    int age;          // 整數變數 
-    float height;       // 浮點數變數
-    char initial;       // 字元變數
-    double pi = 3.14159; // 雙精度浮點數變數
-    _Bool isAdult = 1;   // 布林變數
-     return 0;
-}
+    int a = 10;
+    int b = 20;
 
+    printf("a == b 的結果: %d\n", a == b); // 輸出 0 (假)
+    printf("a != b 的結果: %d\n", a != b); // 輸出 1 (真)
+    printf("a > b 的結果: %d\n", a > b);   // 輸出 0 (假)
+    printf("a < b 的結果: %d\n", a < b);   // 輸出 1 (真)
+    printf("a >= b 的結果: %d\n", a >= b);  // 輸出 0 (假)
+    printf("a <= b 的結果: %d\n", a <= b);  // 輸出 1 (真)
+
+    return 0;
+}

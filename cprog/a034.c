@@ -1,38 +1,31 @@
+//a034:計算最大公因數
 #include <stdio.h>
-
-int main()
-{
-    int x;
-    char y;
-
-    // 讓使用者輸入 x 的值
-    printf("Enter a value for x: ");
-    scanf("%d", &x);
-
-    // 使用 switch-case
-    switch (x)
-    {
-    case 10:
-        y = 'a';
-        break;
-    case 20:
-    case 30:
-        y = 'b';
-        break;
-    default:
-        y = 'c';
+// 計算最大公因數的函式
+int gcd1(int a, int b) {
+    if (b == 0) {
+        return a; // 基本情況：餘數為 0，a 即為最大公因數
+    } else {
+        return gcd1(b, a % b); // 遞迴呼叫
     }
-    printf("Using switch-case, y = %c\n", y);
+}
+int gcd2(int a, int b) {
+    while (b != 0) {
+        int temp = b;
+        b = a % b;
+        a = temp;
+    }
+    return a;
+}
 
-    // 使用 if-else
-    if (x == 10)
-        y = 'a';
-    else if (x == 20 || x == 30)
-        y = 'b';
-    else
-        y = 'c';
+int main() {
+    int num1, num2;
 
-    printf("Using if-else, y = %c\n", y);
+    // 輸入兩個整數
+    printf("請輸入兩個整數：");
+    scanf("%d %d", &num1, &num2);
 
+    // 計算並印出最大公因數
+    printf("%d 和 %d 的gcd是：%d\n", num1, num2, gcd1(num1, num2));
+    printf("%d 和 %d 的gcd是：%d\n", num1, num2, gcd2(num1, num2));
     return 0;
 }
